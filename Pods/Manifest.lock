@@ -1,0 +1,194 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BetweenKit (2.0.1)
+  - BLMultiColorLoader (0.1.6)
+  - CBZSplashView (1.0.0)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.6)
+  - Firebase (5.0.1):
+    - Firebase/Core (= 5.0.1)
+  - Firebase/Auth (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.0.0)
+  - Firebase/Core (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.0)
+  - Firebase/CoreOnly (5.0.1):
+    - FirebaseCore (= 5.0.1)
+  - Firebase/Crash (5.0.1):
+    - Firebase/Core
+    - FirebaseCrash (= 3.0.0)
+  - Firebase/DynamicLinks (5.0.1):
+    - Firebase/Core
+    - FirebaseDynamicLinks (= 3.0.0)
+  - FirebaseAnalytics (5.0.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
+  - FirebaseAuth (5.0.0):
+    - FirebaseCore (~> 5.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (5.0.1):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseCrash (3.0.0):
+    - FirebaseAnalytics (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - Protobuf (~> 3.5)
+  - FirebaseDynamicLinks (3.0.0):
+    - FirebaseAnalytics (~> 5.0)
+  - FirebaseInstanceID (3.0.0):
+    - FirebaseCore (~> 5.0)
+  - GKImagePicker (0.0.1)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - GoogleSignIn (4.1.2):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMOAuth2 (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.4)
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
+  - GTMOAuth2 (1.1.6):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.15):
+    - GTMSessionFetcher/Full (= 1.1.15)
+  - GTMSessionFetcher/Core (1.1.15)
+  - GTMSessionFetcher/Full (1.1.15):
+    - GTMSessionFetcher/Core (= 1.1.15)
+  - HCSStarRatingView (1.5)
+  - HMSegmentedControl (1.5.5)
+  - LXReorderableCollectionViewFlowLayout (0.2.1)
+  - Mapbox-iOS-SDK (3.7.8)
+  - MARKRangeSlider (1.1.1)
+  - MPCoachMarks (0.0.12)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - Protobuf (3.5.0)
+  - "UITextView+Placeholder (1.2.1)"
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - BetweenKit
+  - BLMultiColorLoader
+  - CBZSplashView (~> 1.0.0)
+  - Crashlytics
+  - Fabric
+  - Firebase
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Crash
+  - Firebase/DynamicLinks
+  - GKImagePicker (~> 0.0)
+  - GoogleMaps
+  - GooglePlaces (~> 2.7.0)
+  - GoogleSignIn
+  - HCSStarRatingView (~> 1.5)
+  - HMSegmentedControl
+  - LXReorderableCollectionViewFlowLayout (~> 0.2)
+  - Mapbox-iOS-SDK
+  - MARKRangeSlider
+  - MPCoachMarks
+  - "UITextView+Placeholder (~> 1.2)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BetweenKit
+    - BLMultiColorLoader
+    - CBZSplashView
+    - Crashlytics
+    - Fabric
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseCrash
+    - FirebaseDynamicLinks
+    - FirebaseInstanceID
+    - GKImagePicker
+    - GoogleMaps
+    - GooglePlaces
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMOAuth2
+    - GTMSessionFetcher
+    - HCSStarRatingView
+    - HMSegmentedControl
+    - LXReorderableCollectionViewFlowLayout
+    - Mapbox-iOS-SDK
+    - MARKRangeSlider
+    - MPCoachMarks
+    - nanopb
+    - Protobuf
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BetweenKit: 89edc0c6dd96eb33ea02c097bb99a9b1c14880f0
+  BLMultiColorLoader: 9208e4541a88ec12e0da5af0e3619a805ab7ff6e
+  CBZSplashView: 9ce4cba22024476ff4a97d6433e7347da6376016
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
+  FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
+  FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
+  FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
+  FirebaseCrash: 7adbf73b2c3ea424500cb6b1dae05c5bac72af9b
+  FirebaseDynamicLinks: c70e8ef2f267f13459db89b8816b13a06b2278d2
+  FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
+  GKImagePicker: 38eabf8e048ed7275f9bc3cc3c3f3620c4a4826f
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMOAuth2: e8b6512c896235149df975c41d9a36c868ab7fba
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
+  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
+  LXReorderableCollectionViewFlowLayout: acd6fe9fd0800efc656266a345130a2f634abf85
+  Mapbox-iOS-SDK: a8b55533ef5c5e91b5a26533bd4fb0ec88a3b994
+  MARKRangeSlider: ef7e1fe84d22996f47fd72dcb8de50b9410aac47
+  MPCoachMarks: a957aad7e54d0eec7cda88ae2cf7dc9f10f7a96c
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
+
+PODFILE CHECKSUM: 223276be7e795bae09703a130151f8480a046c1c
+
+COCOAPODS: 1.7.5

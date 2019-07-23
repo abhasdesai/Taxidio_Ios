@@ -1,0 +1,6 @@
+framework module Pods_TaxidioUITests {
+  umbrella header "Pods-TaxidioUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

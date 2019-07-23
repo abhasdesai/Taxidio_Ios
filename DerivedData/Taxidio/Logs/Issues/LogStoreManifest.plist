@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>E67A0694-EA9F-47C3-B279-A819E77D8A3D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>E67A0694-EA9F-47C3-B279-A819E77D8A3D.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>Taxidio-anwotpqxvzflgxhlcylcyuszwtsr</string>
+			<key>timeStartedRecording</key>
+			<real>585337932.17477405</real>
+			<key>timeStoppedRecording</key>
+			<real>585337949.04477704</real>
+			<key>title</key>
+			<string>Build target Taxidio</string>
+			<key>uniqueIdentifier</key>
+			<string>E67A0694-EA9F-47C3-B279-A819E77D8A3D</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>
