@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <Webkit/WebKit.h>
 @import Firebase;
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -23,6 +24,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //New Notifications Settings:
+    
+    UNAuthorizationOptions options = UNAuthorizationOptionAlert + UNAuthorizationOptionSound;
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:options
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                              if (!granted) {
+                                  NSLog(@"Oops, no access");
+                              }
+                          }];
+    
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = @"Hi from Plot!";
+    content.body = @"Plot Projects says hi";
+    content.sound = [UNNotificationSound defaultSound];
+    
+    //Notification part ends
+    
     [Helper setPREFint:0 :@"isFromViewItinerary"];
 
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
@@ -49,7 +68,7 @@
     application.applicationIconBadgeNumber = 0;
     if( SYSTEM_VERSION_LESS_THAN( @"10.0"))
     {
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound |    UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+       [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound |    UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
     else
@@ -59,23 +78,24 @@
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error)
          {
              if( !error )
-             {
-                 [[UIApplication sharedApplication] registerForRemoteNotifications];  // required to get the app to do anything at all about push notifications
+             {                   
                  NSLog( @"Push registration success." );
-             }
+            }
              else
              {
                  NSLog(@"Push registration FAILED");
                  NSLog(@"ERROR: %@ - %@", error.localizedFailureReason, error.localizedDescription);
                  NSLog(@"SUGGESTIONS: %@ - %@", error.localizedRecoveryOptions, error.localizedRecoverySuggestion);
              }
+             
          }];
     }
-   
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(tokenAvailableNotification:)
                                                  name:@"NEW_TOKEN_AVAILABLE"
-                                               object:nil];
+                                            object:nil];
     [self updateUserDeviceDetails : strUDIDToken];
 
     // For CrashLytics
@@ -286,40 +306,35 @@ didDisconnectWithUser:(GIDGoogleUser *)user
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    NSString *tokenStr = [deviceToken description];
-    NSLog(@"%@",tokenStr);
-    
-    strUDIDToken = [[[tokenStr stringByReplacingOccurrencesOfString:@"<" withString:@""]
-                            stringByReplacingOccurrencesOfString:@">" withString:@""]
-                           stringByReplacingOccurrencesOfString:@" " withString:@""];
-    [[NSUserDefaults standardUserDefaults] setValue:strUDIDToken forKey:@"deviceTocken"];
-    [[NSUserDefaults standardUserDefaults]synchronize];
-    NSLog(@"Did register for remote notifications deviceToken ==: %@", strUDIDToken);
-    
-    NSNotification *notif = [NSNotification notificationWithName:@"NEW_TOKEN_AVAILABLE" object:strUDIDToken];
-    [[NSNotificationCenter defaultCenter] postNotification:notif];
-    [Helper setPREF:strUDIDToken:PREF_DEVICE_UDID];
+        NSLog(@"Did Register for Remote Notifications with Device Token (%@)", deviceToken);
 }
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    
+    NSLog(@"Did Fail to Register for Remote Notifications");
+    NSLog(@"%@, %@", error, error.localizedDescription);
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
 {
-    if(application.applicationState == UIApplicationStateInactive)
-    {
-        NSLog(@"Inactive");
-        [[NSNotificationCenter defaultCenter]  postNotificationName:@"PENDINGREQUEST" object:self];
-    }
-    else if (application.applicationState == UIApplicationStateBackground) {
-        [[NSNotificationCenter defaultCenter]  postNotificationName:@"PENDINGREQUEST" object:self];
-    }
-    else
-    {
-        NSLog(@"Active");
-        //[[NSNotificationCenter defaultCenter]  postNotificationName:@"NOTIFICATIONNAME"  object:self];
-    }
+    NSLog( @"Handle push from foreground" );
+    // custom code to handle push while app is in the foreground
+    NSLog(@"%@", notification.request.content.userInfo);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+         withCompletionHandler:(void (^)(void))completionHandler
+{
+    NSLog( @"Handle push from background or closed" );
+    // if you set a member variable in didReceiveRemoteNotification, you  will know if this is from closed or background
+    NSLog(@"%@", response.notification.request.content.userInfo);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+   openSettingsForNotification:(UNNotification *)notification{
+    
 }
 @end
