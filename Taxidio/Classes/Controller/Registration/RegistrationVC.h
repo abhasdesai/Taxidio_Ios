@@ -7,7 +7,6 @@
 //
 
 #import "Utilities.h"
-#import "Keychain.h"
 
 @interface RegistrationVC : UIViewController
 {

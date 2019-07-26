@@ -46,6 +46,16 @@
 				<string>com.googleusercontent.apps.302599165572-cn68b644nibj42964v9m1n4c08pc6td4</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Bundle ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.taxidio-app.taxidio</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.7</string>
@@ -113,9 +123,11 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>App would like to access camera to capture profile photo. Your photos won&apos;t be shared without your permission.</string>
+	<string>App would like to access camera to capture profile photo. Your photos won't be shared without your permission.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Face Authentication</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App would like to access Photo Library to upload profile photo. Your photos won&apos;t be shared without your permission.</string>
+	<string>App would like to access Photo Library to upload profile photo. Your photos won't be shared without your permission.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Avenir-Book_0</string>
@@ -138,8 +150,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSFaceIDUsageDescription</key>
-	<string>Face Authentication</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

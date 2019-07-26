@@ -11,6 +11,7 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <Webkit/WebKit.h>
+#import <Firebase/Firebase.h>
 @import Firebase;
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
@@ -22,23 +23,42 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //New Notifications Settings:
+    //[FIRApp configure];
+    //if([FIRApp defaultApp] == nil){
+    //    [FIRApp configure];
+    //}
+    //[FIRApp configure];
     
-    UNAuthorizationOptions options = UNAuthorizationOptionAlert + UNAuthorizationOptionSound;
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    [center requestAuthorizationWithOptions:options
-                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
-                              if (!granted) {
-                                  NSLog(@"Oops, no access");
-                              }
-                          }];
+    [FIRMessaging messaging].delegate = self;
+    [FIROptions defaultOptions].deepLinkURLScheme = @"com.taxidio-app.taxidio";
+    [FIRApp configure];
     
-    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-    content.title = @"Hi from Plot!";
-    content.body = @"Plot Projects says hi";
-    content.sound = [UNNotificationSound defaultSound];
+    //[FIRApp configure];
+    if ([UNUserNotificationCenter class] != nil) {
+        // iOS 10 or later
+        // For iOS 10 display notification (sent via APNS)
+        [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+        UNAuthorizationOptions authOptions = UNAuthorizationOptionAlert |
+        UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+        [[UNUserNotificationCenter currentNotificationCenter]
+         requestAuthorizationWithOptions:authOptions
+         completionHandler:^(BOOL granted, NSError * _Nullable error) {
+             // ...
+         }];
+    } else {
+        // iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
+        UIUserNotificationType allNotificationTypes =
+        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+        UIUserNotificationSettings *settings =
+        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+    
+    [application registerForRemoteNotifications];
     
     //Notification part ends
     
@@ -63,39 +83,10 @@
     [GMSPlacesClient provideAPIKey:GOOGLE_PLACE_KEY];
     
     // Use Firebase library to configure APIs
-    [FIRApp configure];
+    
     
     application.applicationIconBadgeNumber = 0;
-    if( SYSTEM_VERSION_LESS_THAN( @"10.0"))
-    {
-       [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound |    UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
-    else
-    {
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        center.delegate = self;
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error)
-         {
-             if( !error )
-             {                   
-                 NSLog( @"Push registration success." );
-            }
-             else
-             {
-                 NSLog(@"Push registration FAILED");
-                 NSLog(@"ERROR: %@ - %@", error.localizedFailureReason, error.localizedDescription);
-                 NSLog(@"SUGGESTIONS: %@ - %@", error.localizedRecoveryOptions, error.localizedRecoverySuggestion);
-             }
-             
-         }];
-    }
-    
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(tokenAvailableNotification:)
-                                                 name:@"NEW_TOKEN_AVAILABLE"
-                                            object:nil];
+
     [self updateUserDeviceDetails : strUDIDToken];
 
     // For CrashLytics
@@ -117,8 +108,39 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController  = initialViewController;
     [self.window makeKeyAndVisible];
+    
+    //let notificationOption = launchOptions?[.remoteNotification]
+    
+    // 1
+    //if let notification = notificationOption as? [String: AnyObject],
+    //    let aps = notification["aps"] as? [String: AnyObject] {
+            
+            // 2
+    //        NewsItem.makeNewsItem(aps)
+            
+            // 3
+      //      (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+    
     return YES;
 }
+
+
+
+- (void)messaging:(FIRMessaging *)messaging didReceiveRegistrationToken:(NSString *)fcmToken {
+    NSLog(@"FCM registration token: %@", fcmToken);
+    // Notify about received token.
+    NSDictionary *dataDict = [NSDictionary dictionaryWithObject:fcmToken forKey:@"token"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:
+     @"FCMToken" object:nil userInfo:dataDict];
+    // TODO: If necessary send token to application server.
+    // Note: This callback is fired at each app startup and whenever a new token is generated.
+}
+
+// With "FirebaseAppDelegateProxyEnabled": NO
+//- (void)application:(UIApplication *)application
+//didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+//    [FIRMessaging messaging].APNSToken = deviceToken;
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     
@@ -295,19 +317,6 @@ didDisconnectWithUser:(GIDGoogleUser *)user
 }
 
 #pragma mark-======= Push Notification Delegates =======
-
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
-{
-    if (notificationSettings.types != UIUserNotificationTypeNone) {
-        NSLog(@"didRegisterUser");
-        [application registerForRemoteNotifications];
-    }
-}
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-        NSLog(@"Did Register for Remote Notifications with Device Token (%@)", deviceToken);
-}
 
 -(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {

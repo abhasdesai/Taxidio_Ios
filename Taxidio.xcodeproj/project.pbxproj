@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,8 @@
 		1D7A4FC62164E1C000A58CD3 /* InvitedTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4FC52164E1C000A58CD3 /* InvitedTripsViewController.m */; };
 		1D7A4FC921650CA200A58CD3 /* CoTravellerDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4FC821650CA200A58CD3 /* CoTravellerDataViewController.m */; };
 		1D85C1FC213D439B00D8B043 /* SOSContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85C1FB213D439B00D8B043 /* SOSContactViewController.m */; };
-		1D994D8422E5B46400DF2ACD /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D994D8322E5B46400DF2ACD /* Keychain.m */; };
+		1D86712F22EB00A500EF1310 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE18DB1F28567A002D7F07 /* AppDelegate.m */; };
+		1D86713022EB20B200EF1310 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 945ADDE81F0A54E200AAD185 /* Info.plist */; };
 		1D994D9022E5DF6500DF2ACD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D994D8D22E5DF6500DF2ACD /* FBSDKLoginKit.framework */; };
 		1D994D9122E5DF6500DF2ACD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D994D8E22E5DF6500DF2ACD /* Bolts.framework */; };
 		1D994D9222E5DF6500DF2ACD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D994D8F22E5DF6500DF2ACD /* FBSDKCoreKit.framework */; };
@@ -107,7 +108,6 @@
 		94D083541FA1FBB6001952E3 /* BlogDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D083531FA1FBB6001952E3 /* BlogDetailsVC.m */; };
 		94D39A5F1FA6F79800108E08 /* ForumListWithRatingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D39A5E1FA6F79800108E08 /* ForumListWithRatingVC.m */; };
 		94D39A621FA6F7B000108E08 /* CellForumList.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D39A611FA6F7B000108E08 /* CellForumList.m */; };
-		94DE19341F28567A002D7F07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE18DB1F28567A002D7F07 /* AppDelegate.m */; };
 		94DE19351F28567A002D7F07 /* DashBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE18E01F28567A002D7F07 /* DashBoardVC.m */; };
 		94DE19391F28567A002D7F07 /* FeedbackListingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE18EA1F28567A002D7F07 /* FeedbackListingVC.m */; };
 		94DE193A1F28567A002D7F07 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE18EC1F28567A002D7F07 /* FeedbackVC.m */; };
@@ -195,6 +195,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1D92D45622E9BBC800CF78C5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F502841F20CD7C007E44F3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,8 +229,7 @@
 		1D7A4FC821650CA200A58CD3 /* CoTravellerDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoTravellerDataViewController.m; sourceTree = "<group>"; };
 		1D85C1FA213D439B00D8B043 /* SOSContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOSContactViewController.h; sourceTree = "<group>"; };
 		1D85C1FB213D439B00D8B043 /* SOSContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOSContactViewController.m; sourceTree = "<group>"; };
-		1D994D8222E5B46400DF2ACD /* Keychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
-		1D994D8322E5B46400DF2ACD /* Keychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		1D92D44722E9BBC800CF78C5 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		1D994D8D22E5DF6500DF2ACD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Documents/FacebookSDKs-iOS-4.40.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		1D994D8E22E5DF6500DF2ACD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Documents/FacebookSDKs-iOS-4.40.0/Bolts.framework"; sourceTree = "<group>"; };
 		1D994D8F22E5DF6500DF2ACD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Documents/FacebookSDKs-iOS-4.40.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
@@ -614,6 +623,7 @@
 				F98B9C5EB563A31D7884214B /* libPods-Taxidio.a */,
 				0F658C7B0E810E63B9EA5F08 /* libPods-TaxidioTests.a */,
 				AD8ABECE909978614A5CF9DF /* libPods-TaxidioUITests.a */,
+				1D92D44722E9BBC800CF78C5 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1163,8 +1173,6 @@
 			children = (
 				94DE192C1F28567A002D7F07 /* RegistrationVC.h */,
 				94DE192D1F28567A002D7F07 /* RegistrationVC.m */,
-				1D994D8222E5B46400DF2ACD /* Keychain.h */,
-				1D994D8322E5B46400DF2ACD /* Keychain.m */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -1427,6 +1435,7 @@
 				4A2497D5091894026087E4F7 /* [CP] Embed Pods Frameworks */,
 				897FA382F5BF87C105018DFD /* [CP] Copy Pods Resources */,
 				940899F11FCE8ABF009A3447 /* ShellScript */,
+				1D92D45622E9BBC800CF78C5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -1481,15 +1490,20 @@
 		945ADDCC1F0A54E200AAD185 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Taxidio;
 				TargetAttributes = {
 					945ADDD31F0A54E200AAD185 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DG8L2YN5MY;
+						DevelopmentTeam = DMVG239YG3;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 0;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
@@ -1497,12 +1511,15 @@
 								enabled = 0;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Maps.iOS = {
 								enabled = 0;
 							};
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
 						};
@@ -1521,7 +1538,7 @@
 				};
 			};
 			buildConfigurationList = 945ADDCF1F0A54E200AAD185 /* Build configuration list for PBXProject "Taxidio" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1565,6 +1582,7 @@
 				94EF04991F1CB425008AA1EB /* OpenSans-Regular.ttf in Resources */,
 				9424C16E1FFB5E5600317C9A /* Sports & Adventure.jpg in Resources */,
 				9424C1631FFB5E5600317C9A /* Festivals & Culture.jpg in Resources */,
+				1D86713022EB20B200EF1310 /* Info.plist in Resources */,
 				9424C1691FFB5E5600317C9A /* Relaxation & Spa.jpg in Resources */,
 				94EF04971F1CB425008AA1EB /* LithosPro-Regular.otf in Resources */,
 				94F1A0FD1FA73EB9008C6D72 /* Main.storyboard in Resources */,
@@ -1605,15 +1623,12 @@
 			buildActionMask = 12;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Taxidio/Pods-Taxidio-frameworks.sh",
-				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
-				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taxidio/Pods-Taxidio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taxidio/Pods-Taxidio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1642,69 +1657,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Taxidio/Pods-Taxidio-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/BLMultiColorLoader/BLMultiColorLoader.bundle",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetButton.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetButton@2x.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetButtonPressed.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetButtonPressed@2x.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetDoneButton.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetDoneButton@2x.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetDoneButtonPressed.png",
-				"${PODS_ROOT}/GKImagePicker/GKImages/PLCameraSheetDoneButtonPressed@2x.png",
-				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/MARKRangeSlider/MARKRangeSlider.bundle",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-down.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-down@2x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-down@3x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-left.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-left@2x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-left@3x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-right.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-right@2x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-right@3x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-top-left.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-top-left@2x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-top-left@3x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-top.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-top@2x.png",
-				"${PODS_ROOT}/MPCoachMarks/MPCoachMarks/arrows/arrow-top@3x.png",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taxidio/Pods-Taxidio-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BLMultiColorLoader.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetButton.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetButton@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetButtonPressed.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetButtonPressed@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetDoneButton.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetDoneButton@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetDoneButtonPressed.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PLCameraSheetDoneButtonPressed@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MARKRangeSlider.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-down.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-down@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-down@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-left.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-left@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-left@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-right.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-right@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-right@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-top-left.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-top-left@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-top-left@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-top.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-top@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrow-top@3x.png",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Taxidio/Pods-Taxidio-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1794,6 +1752,7 @@
 				942134D11F27117B00B44B6A /* PlaceObject.m in Sources */,
 				94DE193B1F28567A002D7F07 /* ForumVC.m in Sources */,
 				94F5026A1F206CBA007E44F3 /* DPCalendarMonthlyCell.m in Sources */,
+				1D86712F22EB00A500EF1310 /* AppDelegate.m in Sources */,
 				94DE194C1F28567A002D7F07 /* SignInPage.m in Sources */,
 				94DE19491F28567A002D7F07 /* LeftCellHotel.m in Sources */,
 				94EBD5A91F25CB72004B64D2 /* SBJsonBase.m in Sources */,
@@ -1816,7 +1775,6 @@
 				94B3EFB31F6B91DE00142D7F /* SWRevealViewController.m in Sources */,
 				94F502701F206CBA007E44F3 /* NSString+DP.m in Sources */,
 				94F5026B1F206CBA007E44F3 /* DPCalendarMonthlySingleMonthCell.m in Sources */,
-				94DE19341F28567A002D7F07 /* AppDelegate.m in Sources */,
 				94DE194D1F28567A002D7F07 /* MenuPageVCViewController.m in Sources */,
 				1D85C1FC213D439B00D8B043 /* SOSContactViewController.m in Sources */,
 				94EBD5A71F25CB72004B64D2 /* NSString+SBJSON.m in Sources */,
@@ -1841,7 +1799,6 @@
 				94F5026C1F206CBA007E44F3 /* DPCalendarMonthlyWeekdayCell.m in Sources */,
 				94DE19481F28567A002D7F07 /* HotelViewVC.m in Sources */,
 				94DE19391F28567A002D7F07 /* FeedbackListingVC.m in Sources */,
-				1D994D8422E5B46400DF2ACD /* Keychain.m in Sources */,
 				94EBD5A41F25CB72004B64D2 /* WSFrameWork.m in Sources */,
 				94EBD5A61F25CB72004B64D2 /* NSObject+SBJSON.m in Sources */,
 				1D7A4FC921650CA200A58CD3 /* CoTravellerDataViewController.m in Sources */,
@@ -1959,7 +1916,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Abhas Desai (E3F586CRN5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1978,7 +1935,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2016,7 +1973,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Abhas Desai (E3F586CRN5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2029,7 +1986,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2045,11 +2002,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = Taxidio/Taxidio.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Krunal Chauhan (Z7FKVC8DZK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Abhas Desai (E3F586CRN5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = DG8L2YN5MY;
+				DEVELOPMENT_TEAM = DMVG239YG3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2058,13 +2015,15 @@
 					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = Taxidio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taxidio-app.taxidio";
 				PRODUCT_NAME = Taxidio;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Taxidio/Classes/Controller/Taxidio-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -2079,11 +2038,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = Taxidio/Taxidio.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Krunal Chauhan (Z7FKVC8DZK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Abhas Desai (E3F586CRN5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = DG8L2YN5MY;
+				DEVELOPMENT_TEAM = DMVG239YG3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2092,13 +2051,15 @@
 					"~/Documents/FacebookSDK",
 				);
 				INFOPLIST_FILE = Taxidio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taxidio-app.taxidio";
 				PRODUCT_NAME = Taxidio;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Taxidio/Classes/Controller/Taxidio-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -2110,7 +2071,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = RBSWR63ZUM;
 				INFOPLIST_FILE = TaxidioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-intelligence.TaxidioTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Taxidio.app/Taxidio";
@@ -2124,7 +2089,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = RBSWR63ZUM;
 				INFOPLIST_FILE = TaxidioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-intelligence.TaxidioTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Taxidio.app/Taxidio";
@@ -2136,7 +2105,11 @@
 			baseConfigurationReference = 3F0616C83395EF75C7AC1657 /* Pods-TaxidioUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TaxidioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-intelligence.TaxidioUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Taxidio;
@@ -2148,7 +2121,11 @@
 			baseConfigurationReference = 94A97E604C00DBC4B8946D1F /* Pods-TaxidioUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TaxidioUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-intelligence.TaxidioUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Taxidio;

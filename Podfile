@@ -5,7 +5,7 @@ target 'Taxidio' do
   # Pods for Taxidio
     
 	source 'https://github.com/CocoaPods/Specs.git'
-    platform :ios, '10.0'
+    platform :ios, '12.0'
 
     pod 'BLMultiColorLoader' 
 #   pod 'Firebase'
@@ -27,11 +27,11 @@ target 'Taxidio' do
     pod 'UITextView+Placeholder', '~> 1.2'
     pod 'MPCoachMarks'
     pod 'Firebase'
+    pod 'Firebase/Messaging'
 #    pod 'FirebaseUI', '= 0.2.6'
     
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
-    pod 'Firebase/Crash'
     pod 'Firebase/DynamicLinks'
     #pod 'Bolts'
     #pod 'FBSDKCoreKit'
