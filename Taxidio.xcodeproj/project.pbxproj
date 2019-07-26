@@ -13,7 +13,6 @@
 		1D7A4FC921650CA200A58CD3 /* CoTravellerDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4FC821650CA200A58CD3 /* CoTravellerDataViewController.m */; };
 		1D85C1FC213D439B00D8B043 /* SOSContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D85C1FB213D439B00D8B043 /* SOSContactViewController.m */; };
 		1D86712F22EB00A500EF1310 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE18DB1F28567A002D7F07 /* AppDelegate.m */; };
-		1D86713022EB20B200EF1310 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 945ADDE81F0A54E200AAD185 /* Info.plist */; };
 		1D994D9022E5DF6500DF2ACD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D994D8D22E5DF6500DF2ACD /* FBSDKLoginKit.framework */; };
 		1D994D9122E5DF6500DF2ACD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D994D8E22E5DF6500DF2ACD /* Bolts.framework */; };
 		1D994D9222E5DF6500DF2ACD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D994D8F22E5DF6500DF2ACD /* FBSDKCoreKit.framework */; };
@@ -1582,7 +1581,6 @@
 				94EF04991F1CB425008AA1EB /* OpenSans-Regular.ttf in Resources */,
 				9424C16E1FFB5E5600317C9A /* Sports & Adventure.jpg in Resources */,
 				9424C1631FFB5E5600317C9A /* Festivals & Culture.jpg in Resources */,
-				1D86713022EB20B200EF1310 /* Info.plist in Resources */,
 				9424C1691FFB5E5600317C9A /* Relaxation & Spa.jpg in Resources */,
 				94EF04971F1CB425008AA1EB /* LithosPro-Regular.otf in Resources */,
 				94F1A0FD1FA73EB9008C6D72 /* Main.storyboard in Resources */,

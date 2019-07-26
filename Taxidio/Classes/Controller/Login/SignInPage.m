@@ -402,6 +402,11 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     }
 }
 
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    //Todo
+}
+
+
 
 - (IBAction)pressSignInGoogle:(id)sender
 {
@@ -1284,6 +1289,50 @@ dismissViewController:(UIViewController *)viewController {
         return  FALSE;
     }
     return TRUE;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    //Todo
+}
+
+- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
+    //Todo
+}
+
+- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+    //Todo
+}
+
+- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
+    return parentSize;
+}
+
+- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+    //Todo
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+    //Todo
+}
+
+- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+    //Todo
+}
+
+- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
+    //Todo
+}
+
+- (void)setNeedsFocusUpdate {
+    //Todo
+}
+
+- (BOOL)shouldUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context {
+    return true;
+}
+
+- (void)updateFocusIfNeeded {
+    //Todo
 }
 
 @end
